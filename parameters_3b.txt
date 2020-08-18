@@ -1,0 +1,58 @@
+####This a file describing the different parameters needed to run the simulation####
+
+####
+#Pinit: initial reservoir pressure
+
+#Cr: rock compressibility
+#Kx: permeability in the x direction, unit md sqme for Ky and Kz
+#Phi: rock porosity 
+
+#mu: fluid viscosity in Cp
+#rho_f: fluid density in lbm/ft^3
+#Cf: fluid compressibility in psi^-1
+
+#Lx: reservoir length in the x direction in feet, same for y and z directions
+#grid_dims = dimensions of the grid (number of cells in the x direction followed by the number of cells in y direction and then z direction)
+
+#position: well position, x first and y second
+#rate: production or injection rate in STB/day
+####
+
+Pinit=6000
+Sg_init=0
+Pbub=3500
+Patm=14.7
+
+
+###Grid parameters:
+Lx=1500
+Ly=1500
+Lz=200
+grid=uniform
+Nx=3
+Ny=2
+Nz=1
+
+###Rock parameters:
+Cr=0
+Kx=permX.txt
+Ky=permY.txt
+Kz=permZ.txt
+Phi=0.22
+
+
+
+###Fluid parameters:
+##Oil
+visco=2.5
+rho_o=49.1
+Co=0.8e-5
+##Gas
+viscg=0
+rho_g=0
+Cg=0
+
+
+
+
+

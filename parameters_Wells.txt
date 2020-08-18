@@ -1,0 +1,79 @@
+####This a file describing the different parameters needed to run the simulation####
+
+####
+#Pinit: initial reservoir pressure
+
+#Cr: rock compressibility
+#Kx: permeability in the x direction, unit md same for Ky and Kz. if _h is added at the end is to show that we have homogeneous perm.
+#Phi: rock porosity 
+
+#mu: fluid viscosity in Cp
+#rho_f: fluid density in lbm/ft^3
+#Cf: fluid compressibility in psi^-1
+
+#Lx: reservoir length in the x direction in feet, same for y and z directions
+#grid_dims = dimensions of the grid (number of cells in the x direction followed by the number of cells in y direction and then z direction)
+
+#position: well position, x first and y second
+#rate: production or injection rate in STB/day
+####
+
+Pinit=4500
+Pbub=3500
+Patm=14.7
+Sg_init=0
+
+###Grid parameters:
+Lx=6900
+Ly=6900
+Lz=100
+grid=uniform
+Nx=33
+Ny=33
+Nz=1
+#grid=heter
+#Nx=dX.txt
+#Ny=dY.txt
+#Nz=dZ.txt
+
+###Rock parameters:
+Cr=0
+Kx=permX.txt
+Ky=permY.txt
+Kz_h=0	
+Phi=0.22
+
+
+
+###Fluid parameters:
+##Oil
+visco=2.5
+rho_o=49.1
+Co=0.8e-5
+##Gas
+viscg=0
+rho_g=0.06055
+Cg=0
+
+
+###Wells:
+$Producer1
+position=17 17
+rate=3000
+BHP=2500
+diam=0.5
+control=rate
+
+$Producer2
+position=32 32
+rate=3000
+BHP=2000
+diam=0.5
+control=rate
+
+$Producer3
+position=2 2
+rate=3000
+BHP=3000
+diam=0.5
+control=rate
