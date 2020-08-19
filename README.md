@@ -8,6 +8,8 @@ Before showing the equations, let’s first go over the assumptions of the devel
 - Porosity is constant.
 - Valid hypothesises for the well model development (Radial-flow, steady-state or pseudosteady-state, fully penetrating, No interference with boundaries or other wells).
 
-We first formulate the equations governing flow in these media using the mass oncervation equation and Darcy's equation. Next, we use a discretization scheme IMPES to discretize these equations. We form our residual vector and from that we can compute our Jacobian and use a Newton method solving strategy.
+We first formulate the equations governing flow in these media using the mass conservation equation and Darcy's equation. Next, we use a discretization scheme Fully Implicit to discretize these equations. We form our residual vector and from that we can compute our Jacobian and use a Newton method solving strategy.
 
 The results from different simulations will be presented and compared to the ones from ECLIPSE software.
+
+I have implented additional options like IMPES descretization strategy and using Automatic Differentiation from Pytorch to compute the Jacobian.
